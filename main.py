@@ -165,9 +165,9 @@ def main() -> None:
 
     game = InteractiveGame(players, agents, small_blind=args.sb, big_blind=args.bb)
 
-    print("╔══════════════════════════════════════╗")
-    print("║      AI Poker Master – Texas Hold'em  ║")
-    print("╚══════════════════════════════════════╝")
+    print("╔════════════════════════════════════════╗")
+    print("║   AI Poker Master  –  Texas Hold'em   ║")
+    print("╚════════════════════════════════════════╝")
     print(f"Players: {', '.join(p.name for p in players)}")
     print(f"Starting chips: {args.chips}  |  Blinds: {args.sb}/{args.bb}")
     print("Commands: fold | check | call | raise <amount>")

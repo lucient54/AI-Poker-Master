@@ -57,9 +57,9 @@ class AIAgent:
     ) -> tuple[str, int]:
         """Return *(action, amount)* for the given game state.
 
-        *amount* for 'raise' is the **additional chips** the player commits
-        on top of *to_call* (i.e. total committed = to_call + amount).
-        Callers should pass ``to_call + amount`` to ``player.bet()``.
+        For 'raise', *amount* is the **total chips the player commits this
+        action** (i.e. the call portion plus the raise increment).  Callers
+        should pass this value directly to ``player.bet(amount)``.
         """
         # --- Bluff ---
         if random.random() < self.bluff_rate and to_call < player.chips:
